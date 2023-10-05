@@ -7,7 +7,7 @@ services:
     ports:
       - "5000:5000"
   db:
-    image: mysql:8.0
+    image: My-mongodb-image
     ports:
       - "3306:3306"
     environment:
