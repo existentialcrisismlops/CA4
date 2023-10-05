@@ -1,0 +1,16 @@
+version: "3"
+services:
+  app:
+    build: ./app
+    links:
+      - db
+    ports:
+      - "5000:5000"
+  db:
+    image: My-mongodb-image
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
