@@ -1,19 +1,19 @@
 version: "3"
+
 services:
   app:
-    image: existentialcrisismlops/myflaskapp # Use the image from Docker Hub
+    build: ./app
     container_name: myflaskapp
     ports:
-      - "80:80"
+      - "5000:5000"
     depends_on:
-      - db # Ensure that the database service is started before the app service
+      - db
   db:
-    image: existentialcrisismlops/my-mongodb-image # Use the image from Docker Hub
-    container_name: my-mongodb-image
+    image: mysql:latest
+    container_name: mymysqlcontainer
     ports:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_DATABASE: mydatabase
     volumes:
-      - ./db:/docker-entrypoint-initdb.d:ro # Corrected volume path
+      - ./db:/docker-entrypoint-initdb.d/:ro
