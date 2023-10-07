@@ -19,6 +19,8 @@ Follow these steps to run the My App stack:
 1. Clone this repository to your local machine:
    
    git clone https://github.com/existentialcrisismlops/CA4.git
+
+
    cd my-app
 
 3. Start the Docker Compose stack:
