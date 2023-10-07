@@ -16,7 +16,7 @@ Clone this repository to your local machine:
 
 bash
 Copy code
-git clone https://github.com/technotrio/CA4.git
+git clone https://github.com/existentialcrisismlops/CA4.git
 cd my-app
 Start the Docker Compose stack:
 
