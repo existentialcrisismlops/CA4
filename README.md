@@ -24,15 +24,15 @@ Follow these steps to run the My App stack:
    
 2. Start the Docker Compose stack:
 
-  ```shell
+   ```shell
   docker-compose up -d
 
 3. Wait for the containers to start. You can check the logs to monitor the progress:
 
-  ```shell
+   ```shell
   docker-compose logs -f
 
 4. To stop the stack and remove the containers when you're done, run:
 
-  ```shell
+   ```shell
   docker-compose down
