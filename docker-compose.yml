@@ -4,7 +4,7 @@ services:
     image: existentialcrisismlops/myflaskapp # Use the image from Docker Hub
     container_name: myflaskapp
     ports:
-      - "80:80"
+      - "4000:5000"
     depends_on:
       - db # Ensure that the database service is started before the app service
   db:
