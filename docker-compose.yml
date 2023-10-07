@@ -2,18 +2,21 @@ version: "3"
 services:
   app:
     image: existentialcrisismlops/myflaskapp # Use the image from Docker Hub
+    platform: linux/amd64
     container_name: myflaskapp
     ports:
-      - "4000:5000"
+      - "80:80"
     depends_on:
       - db # Ensure that the database service is started before the app service
+
   db:
-    image: existentialcrisismlops/my-mongodb-image # Use the image from Docker Hub
-    container_name: my-mongodb-image
+    image: mongo:latest # Use the official MongoDB image from Docker Hub
+    container_name: my-mongodb-container
     ports:
-      - "3306:3306"
+      - "27017:27017" # Map the MongoDB port to the host machine
     environment:
-      MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_DATABASE: mydatabase
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: 1234
+      MONGO_INITDB_DATABASE: mydatabase
     volumes:
-      - ./db:/docker-entrypoint-initdb.d:ro # Corrected volume path
+      - ./mongodb-data:/data/db # Store MongoDB data in a local directory
