@@ -9,13 +9,12 @@ app: Represents the web application.
 db: Represents the MySQL database.
 Images for both services are pulled from Docker Hub.
 
-# Running the Docker Compose Stack
+# Run Docker Compose Stack
 Follow these steps to run the My App stack:
 
 Clone this repository to your local machine:
 
-bash
-Copy code
+ ```bash
 git clone https://github.com/existentialcrisismlops/CA4.git
 cd my-app
 Start the Docker Compose stack:
