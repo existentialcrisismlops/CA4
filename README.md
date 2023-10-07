@@ -17,18 +17,16 @@ Clone this repository to your local machine:
  ```bash
 git clone https://github.com/existentialcrisismlops/CA4.git
 cd my-app
-Start the Docker Compose stack:
 
-bash
-Copy code
+Start the Docker Compose stack:
+ ```bash
 docker-compose up -d
+
 Wait for the containers to start. You can check the logs to monitor the progress:
 
-bash
-Copy code
+ ```bash
 docker-compose logs -f
-To stop the stack and remove the containers when you're done, run:
 
-bash
-Copy code
+To stop the stack and remove the containers when you're done, run:
+ ```bash
 docker-compose down
