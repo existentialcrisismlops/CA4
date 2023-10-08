@@ -3,10 +3,10 @@ from pymongo import MongoClient
 import datetime
 
 app = Flask(__name__)
-app.secret_key = "secret_key"  # Change this to a random secret key
+app.secret_key = "111GHJ"  
 
 app = Flask(__name__)
-app.secret_key = "2378F98"  # Change this to a random secret key
+app.secret_key = "2378F98"  
 
 # MongoDB connection
 client = MongoClient('mongodb://localhost:27017')
@@ -22,7 +22,6 @@ def signup():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        # You should add code here to store users (use a database in a real app)
         return redirect(url_for('login'))
     return render_template('signup.html')
 
@@ -31,7 +30,6 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        # You should add code here to check users credentials (use a database in a real app)
         user_data = {
             'username': username,
             'login_time': datetime.datetime.now()  # Import datetime module
